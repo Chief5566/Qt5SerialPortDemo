@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>954</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(11, 149, 240)</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>40</y>
+     <width>781</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+    color:#FFFFFF;
+}</string>
+   </property>
+   <property name="title">
+    <string>数据接收</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTextEdit" name="textEdit_Receive">
+      <property name="styleSheet">
+       <string notr="true">QTextEdit{
+    color:#FFFFFF;
+	font:18px;
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_send">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>440</y>
+     <width>771</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+    color:#FFFFFF;
+}</string>
+   </property>
+   <property name="title">
+    <string>数据发送</string>
+   </property>
+   <widget class="QTextEdit" name="textEdit_Send">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>671</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit{
+    color:#FFFFFF;
+	font:18px;
+}</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Send">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>20</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    background-color:#00AEEF;
+    color:#FFFFFF;
+    font: bold 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+QPushButton::hover{
+    background-color:#666666 ;
+    color:#FFFFFF;
+    font: bold 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+QPushButton::pressed{
+    background-color:#444444 ;
+    color:#FFFFFF;
+    font: bold 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+
+QPushButton::disabled{
+    background-color:#444444 ;
+    color:#FFFFFF;
+    font: bold 12px;
+    border-style: outset;
+    border-radius: 4px;
+}</string>
+    </property>
+    <property name="text">
+     <string>发送</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_ComControl">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>151</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+    color:#FFFFFF;
+}
+
+QLabel{
+	color:#FFFFFF;
+}
+
+QLabel::disabled{
+	color:#444444;
+}
+
+QComboBox{
+    color:#FFFFFF;
+    background-color:#009FCC;
+}
+
+QComboBox::disabled{
+    color:#444444;
+}</string>
+   </property>
+   <property name="title">
+    <string>串口操作</string>
+   </property>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>121</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>串口号</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_ComPort"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>121</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>波特率</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_BaudRate">
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <property name="currentIndex">
+        <number>3</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>1200</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2400</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4800</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9600</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>19200</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>38400</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>57600</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>115200</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>121</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>校验位</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_CheckBit">
+       <item>
+        <property name="text">
+         <string>No</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Even</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Odd</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Space</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mark</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>121</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>数据位</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_DataBit">
+       <property name="currentIndex">
+        <number>3</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>121</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>停止位</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_StopBit">
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ComScan">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    background-color:#00AEEF;
+    color:#FFFFFF;
+    font: bold 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+QPushButton::hover{
+    background-color:#666666 ;
+    color:#FFFFFF;
+    font: bold 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+QPushButton::pressed{
+    background-color:#444444 ;
+    color:#FFFFFF;
+    font: bold 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+
+QPushButton::disabled{
+    background-color:#444444 ;
+    color:#FFFFFF;
+    font: bold 12px;
+    border-style: outset;
+    border-radius: 4px;
+}</string>
+    </property>
+    <property name="text">
+     <string>扫描串口</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ComConnect">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    background-color:#00AEEF;
+    color:#FFFFFF;
+    font: bold 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+QPushButton::hover{
+    background-color:#666666 ;
+    color:#FFFFFF;
+    font: bold 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+QPushButton::pressed{
+    background-color:#444444 ;
+    color:#FFFFFF;
+    font: bold 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string>连接串口</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>280</y>
+     <width>151</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+    color:#FFFFFF;
+}
+
+QLabel{
+	color:#FFFFFF;
+	font:12px;
+}
+
+QLabel::hover{
+	color:#444444;
+	font:12px;
+}
+
+QLabel::pressed{
+	color:#444444;
+	font:14px;
+}</string>
+   </property>
+   <property name="title">
+    <string>数据操作</string>
+   </property>
+   <widget class="QCheckBox" name="checkBox_HexShow">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#FFFFFF;</string>
+    </property>
+    <property name="text">
+     <string>以十六进制显示</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_HexSend">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#FFFFFF;</string>
+    </property>
+    <property name="text">
+     <string>按十六进制发送</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>111</width>
+      <height>82</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <item>
+      <widget class="custom_label" name="label_CleanRecShow">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt;清空接收区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="custom_label" name="label_CleanSendShow">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt;清空发送区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="custom_label" name="label_SaveShow">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt;保存接收数据&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="custom_label" name="label_SendData">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt;导入发送数据&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_AutoSend">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>440</y>
+     <width>151</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+    color:#FFFFFF;
+}</string>
+   </property>
+   <property name="title">
+    <string>自动发送</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="styleSheet">
+           <string notr="true">color:#FFFFFF</string>
+          </property>
+          <property name="text">
+           <string>周期(毫秒)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_AutoSendTime">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit{
+	color:#FFFFFF
+}</string>
+          </property>
+          <property name="text">
+           <string>1000</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_AutoSend">
+          <property name="styleSheet">
+           <string notr="true">color:#FFFFFF;</string>
+          </property>
+          <property name="text">
+           <string>自动发送</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>941</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QPushButton" name="pushButton_Close">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>0</y>
+      <width>75</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    background-color:#00AEEF;
+    color:#FFFFFF;
+    font: bold 14px;
+    border-style:outset;
+    border-width: 1px;
+    border-radius: 4px;
+}
+QPushButton::hover{
+    background-color:#FF0000 ;
+    color:#FFFFFF;
+    font: bold 14px;
+    border-style:outset;
+    border-radius: 4px;
+}
+QPushButton::pressed{
+    background-color:#880000  ;
+    color:#FFFFFF;
+    font: bold 10px;
+    border-style:outset;
+    border-radius: 4px;
+}</string>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Min">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>0</y>
+      <width>75</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    background-color:#00AEEF;
+    color:#FFFFFF;
+    font: bold 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+QPushButton::hover{
+    background-color:#666666 ;
+    color:#FFFFFF;
+    font: bold 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+QPushButton::pressed{
+    background-color:#444444 ;
+    color:#FFFFFF;
+    font: bold 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}</string>
+    </property>
+    <property name="text">
+     <string>最小化</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>custom_label</class>
+   <extends>QLabel</extends>
+   <header>custom_label.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
